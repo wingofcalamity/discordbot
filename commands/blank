@@ -1,0 +1,8 @@
+module.exports = {
+	name: 'name here',
+	description: 'description here',
+	// alias if needed aliases: ['icon', 'pfp'],
+	execute(message) {
+        //code here
+	},
+}

@@ -1,1 +1,9 @@
 config.json
+node_modules
+files
+beta.js
+logonly.js
+package-lock.json
+package.json
+run.bat
+showtree.bat
