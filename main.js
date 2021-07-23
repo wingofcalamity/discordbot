@@ -12,7 +12,7 @@ const cooldowns = new Discord.Collection();
 //login block
 client.on('ready', () => { 															
     console.log('Ready!');	
-	client.user.setPresence({activity:{name: 'Version 2! Now with 100% less else if loops'}, status: 'idle'})
+	client.user.setPresence({activity:{name: 'Definitely not in development right now.'}, status: 'idle'})
 });
 //message log
 client.on('message', message => {
