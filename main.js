@@ -18,7 +18,7 @@ client.on('ready', () => {
 client.on('message', message => {
 	if (message.author.bot) return; 													
 	//console.log('----------------------------------------------------');
-	console.log(`${message.author.tag}:${message.content}`)
+	console.log(`${message.author.tag}:${message.content} @${message.createdAt}`)
 	//console.log(`Time: ${message.createdAt} `)
 	//console.log(`Channel: #${message.channel.name}/${message.channel.id}`)
 	//console.log(`Contains: ${message.content}`);
