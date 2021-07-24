@@ -16,9 +16,15 @@ client.on('ready', () => {
 });
 //message log
 client.on('message', message => {
+	let time = message.createdAt,
+		hour = (time.getHours()<10?'0':'') + time.getHours(),
+		minute = (time.getMinutes()<10?'0':'') + time.getMinutes(),
+		second = (time.getSeconds()<10?'0':'') + time.getSeconds();
 	if (message.author.bot) return; 													
 	//console.log('----------------------------------------------------');
-	console.log(`${message.author.tag}:${message.content} @${message.createdAt}`)
+
+	console.log(`${message.author.tag} (${hour}:${minute}:${second}):`)
+	console.log(`>${message.content}`)
 	//console.log(`Time: ${message.createdAt} `)
 	//console.log(`Channel: #${message.channel.name}/${message.channel.id}`)
 	//console.log(`Contains: ${message.content}`);
