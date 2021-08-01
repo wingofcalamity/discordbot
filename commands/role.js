@@ -9,4 +9,4 @@ module.exports = {
         let member = guild.member(user) // convert the User object to a GuildMember!
         member.roles.add(['869955922347315230']);
 	},
-}
+};
