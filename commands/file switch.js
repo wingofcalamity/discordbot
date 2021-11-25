@@ -19,15 +19,15 @@ module.exports = {
                     )
                 })
                 break;
-            case "dude":
-                message.channel.send({files:[`./files/dude.png`]})
-                break;
-            case "lfg":
-                message.channel.send({files:[`./files/lfg.png`]})
-                break;
-            case "sip":
-                message.channel.send({files:[`./files/sip.png`]})
-                break;
+//            case "dude":
+//            message.channel.send({files:[`./files/dude.png`]})
+//            break;
+//            case "lfg":
+//            message.channel.send({files:[`./files/lfg.png`]})
+//            break;
+//            case "sip":
+//            message.channel.send({files:[`./files/sip.png`]})
+//            break;
             //end of switch
         }
     }
