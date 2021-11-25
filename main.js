@@ -1,14 +1,15 @@
 //const shit and shizzles
-const fs = require('fs');
-const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
-const client = new Discord.Client();
+const Discord = require('discord.js'),
+	  fs = require('fs'),
+	  {prefix, token} = require('./config.json'),
+      client = new Discord.Client(),
+	  commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js')),
+	  cooldowns = new Discord.Collection();
 client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-client.commands.set(command.name, command);}
-const cooldowns = new Discord.Collection();
+	client.commands.set(command.name, command);
+};
 //login block
 client.on('ready', () => { 															
     console.log('Ready!');	
@@ -23,8 +24,7 @@ client.on('message', message => {
 	if (message.author.bot) return; 													
 	//console.log('----------------------------------------------------');
 
-	console.log(`${message.author.tag} (${hour}:${minute}:${second}):`)
-	console.log(`>${message.content}`)
+	console.log(`${message.author.tag} (${hour}:${minute}:${second}): ${message.content}`)
 	//console.log(`Time: ${message.createdAt} `)
 	//console.log(`Channel: #${message.channel.name}/${message.channel.id}`)
 	//console.log(`Contains: ${message.content}`);
