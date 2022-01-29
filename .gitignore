@@ -8,6 +8,7 @@ showtree.bat
 #code files
 beta.js
 logonly.js
+alex.js
 #json files
 config.json
 package-lock.json
