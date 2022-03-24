@@ -78,7 +78,8 @@ client.on('message', message => {
 //you SUCK
 	try {
 		command.execute(message, args);
-	} catch (error) {
+	} 
+	catch (error) {
 		console.error(error);
 		message.reply('error wii u wii u');
 	}
